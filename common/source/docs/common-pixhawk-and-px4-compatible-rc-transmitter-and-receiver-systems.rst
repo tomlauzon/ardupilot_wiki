@@ -13,7 +13,7 @@ Overview
 
 ArduPilot is compatible with
     #. PPM RC receivers
-    #. Futaba S.Bus receivers 
+    #. S.Bus receivers 
     #. Spektrum DSM and DSM2 receivers
     #. Spectrum DSM-X Satellite receivers
     #. MULTIPLEX SRXL version 1 and version 2 receivers
@@ -25,10 +25,10 @@ used to convert the receiver outputs to PPM-SUM.
 Connecting the receiver
 =======================
 
-To connect a PPM receiver, Futaba S.Bus receiver, or PPM encoder,
+To connect a PPM receiver, S.Bus receiver, or PPM encoder,
 connect the black ground, red power and white signal wires to the RC
 pins. These S.BUS receivers have been tested and are known to work:
-R2008SB, R6008SB.
+R2008SB, R6008SB, FrSky X8R, FrSky XSR.
 
 .. image:: ../../../images/rc-input-wiring.jpg
     :target: ../_images/rc-input-wiring.jpg
@@ -56,53 +56,40 @@ These **MULTIPLEX SRXL** receivers have been tested and are known to work:
     #. RX-9-DR SRXL16 #55840, Firmware 1.35 --> 9 servo sockets, 16 of 16 channels active on SRXL v2 datastream
     #. RX-16-DR pro #55815, Firmware 1.35 --> 16 servo sockets, 16 of 16 channels active on SRXL v2 datastream
 
-Radio systems that support PPM-Sum or S-Bus directly
+Radio systems that support PPM-Sum or S.Bus directly
 ====================================================
 
-This section list radio systems that support PPM-Sum or S-Bus directly.
+This section list radio systems that support PPM-Sum or S.Bus directly.
 
 .. _common-pixhawk-and-px4-compatible-rc-transmitter-and-receiver-systems_frsky_taranis_ppm-sum_compatible_transmitter:
 
-FrSky Taranis PPM-Sum Compatible Transmitter
---------------------------------------------
+FrSky Taranis X9D and Taranis Q X7 RC Transmitters
+--------------------------------------------------
 
 .. tip::
 
-   This solution is **highly recommended** for all RC uses
+   These transmitters are **highly recommended** for all RC uses.
 
 The `FrSky Taranis RC Transmitter <http://www.frsky-rc.com/product/pro.php?pro_id=113>`__ is a
 high quality open source RC Transmitter that is compatible with a
-wide variety of high quality FrSky PPM-Sum compatible receivers.
+wide variety of high quality FrSky PPM-Sum and S.Bus compatible receivers. The Taranis can receive and display telemetry data directly from ArduPilot and on-board FrSky telemetry sensors, such as current and LiPo cell sensors, that can be added to your vehicle.
+.. image:: ../../../images/FrSky_Taranis_X7white.jpg
+    :target: ../_images/FrSky_Taranis_X7white.jpg
 
 .. image:: ../../../images/FRSkyTaranis.jpg
     :target: ../_images/FRSkyTaranis.jpg
 
-.. note::
 
-   This transmitter is a real bargain. You can buy it from different locations e.g. `Range Video <http://www.rangevideo.com/en/radios-and-receivers/96-frsky-taranis-24ghz-rc-system.html>`__ , `Aloft Hobbies <https://alofthobbies.com/catalogsearch/result/?cat=0&q=X9D>`__ or `HobbyKing <https://hobbyking.com/en_us/catalogsearch/result/?q=X9D>`__ .
-
-FrSky Delta 8 MultiProtocol PPM-Sum Receiver
---------------------------------------------
-
--  This PPM-Sum compatible `FrSky Delta 8 Receiver <http://www.frsky-rc.com/product/pro.php?pro_id=110>`__ is
-   multi-platform capable including Hitec Aurora 9 and Futaba RC
-   transmitters.
--  For an Aurora 9, install a jumper between receiver signal pins 6 and
-   7 (Hitec AFHSS) and pins 3 and 4 (CPPM mode) in order to bind.
 
 .. note::
- 
-   For a Hitec Aurora 9 system you need to have version 3.01 or later of the firmware in the transmitter's AFHSS 2.4 GHz module.
-    - If your module does not have version 3.01 or later firmware you will need the Hitec HPP-22 programmer module in order to upgrade it.
-    - Upgrade both the AFHSS 2.4 GHz module and the transmitter itself to the latest versions following `HP-22 online
-      instructions <http://hitecrcd.co.kr/tester/hpp_22.htm>`__.
-    - If the transmitter's AFHSS module's blue LED will not illuminate during binding you will need to perform this firmware upgrade.
 
--  I am using the Delta 8 successfully with a PX4 and an Aurora 9, I had
-   to complete the firmware upgrade procedure before I could bind.
+   This transmitter is a real bargain. You can buy it from different locations e.g. `Craft and Theory <http://www.craftandtheoryllc.com/packageq>`__ , `Aloft Hobbies <https://alofthobbies.com/catalogsearch/result/?cat=0&q=X9D>`__ .
 
-.. image:: ../../../images/receiver_delta8.jpg
-    :target: ../_images/receiver_delta8.jpg
+The Taranis X9D and Taranis Q X7 can run the FlightDeck telemetry user interface.
+
+FrSky X Receiver
+----------------
+
 
 Turnigy Transmitter Compatible With FrSky Transmitter Module
 ------------------------------------------------------------
